@@ -40,6 +40,31 @@ El Standards & Compliance Engine debe ofrecer un registro versionado de normas y
 - System Factory genera desde el inicio una matriz de cumplimiento y pruebas de aceptación para cada sistema nuevo.
 - Los agentes de IA consultan controles y restricciones antes de ejecutar tareas y registran evidencia de sus decisiones.
 
+## Principio de mejora neta: mejorar sin entorpecer
+Toda mejora debe producir un beneficio verificable sin degradar las capacidades existentes. Una modificación no se considera mejora por el solo hecho de añadir funciones, complejidad, automatizaciones o controles.
+
+Antes de proponer o ejecutar un cambio, el responsable debe:
+1. Identificar el problema, necesidad u oportunidad y establecer una línea base del comportamiento actual.
+2. Definir el resultado esperado y métricas de éxito: calidad, precisión, tiempo, costo, rendimiento, seguridad, disponibilidad, facilidad de uso y mantenibilidad, según corresponda.
+3. Evaluar impacto sobre todos los sistemas relacionados: dependencias, contratos, APIs, datos, permisos, interfaces, procesos, usuarios y costos operativos.
+4. Comparar alternativas, incluida no hacer el cambio; preferir la solución más simple que resuelva el problema.
+5. Determinar riesgos, compatibilidad hacia atrás, migración, recuperación y plan de reversión.
+6. Implementar en cambios pequeños, aislados y trazables; usar pruebas automatizadas, entornos de prueba y despliegues graduales cuando sea viable.
+7. Verificar que no se hayan introducido regresiones funcionales, de seguridad, rendimiento, datos, accesibilidad ni operación.
+8. Medir el resultado frente a la línea base y registrar evidencia, documentación, decisiones y lecciones aprendidas.
+
+### Condiciones obligatorias de aceptación
+- Las funciones existentes y los contratos públicos deben mantenerse, salvo cambio aprobado y planificado.
+- Ningún cambio se despliega si fallan pruebas críticas o controles de seguridad aplicables.
+- Deben existir monitoreo, alertas y un mecanismo de reversión proporcional al riesgo.
+- Las migraciones de datos deben ser respaldables, verificables y recuperables.
+- Los cambios de alto impacto requieren revisión independiente y aprobación antes de producción.
+- Si el beneficio no se demuestra, el cambio genera regresiones o aumenta innecesariamente la carga operativa, se corrige, revierte o retira.
+- La documentación y los procedimientos deben actualizarse junto con el cambio, no después como tarea opcional.
+
+### Indicadores de mejora
+Cada subsistema mantendrá indicadores pertinentes, como tasa de defectos y regresiones, disponibilidad, latencia, costo por operación, tiempo de ciclo, éxito de tareas, incidentes, deuda técnica y satisfacción de usuarios. No se optimizará una métrica aislada a costa de degradar otra dimensión crítica.
+
 ## Jerarquía y resolución de conflictos
 Se respetará la legislación y regulación obligatoria de la jurisdicción, los contratos y requisitos del cliente, los estándares técnicos aplicables y las políticas internas aprobadas. Si hay conflicto, JULIUS lo registra, explica el impacto y escala la decisión; nunca resuelve silenciosamente una obligación legal o contractual.
 
